@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  web:
+    image: my-php-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    volumes:
+      - .:/var/www/html
+    restart: always
